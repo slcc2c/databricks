@@ -12,6 +12,9 @@
 # MAGIC ### How?
 # MAGIC Delta Lake includes a great feature called [Delta Clone](https://docs.databricks.com/spark/latest/spark-sql/language-manual/delta-clone.html).
 # MAGIC This notebook implements Delta Clone and Delta Lake w/ the PySpark and SparkSQL APIs to facilitate a migration of your Delta Lake Table and associated Hive Metadata to a new location. 
+# MAGIC ### Caveats
+# MAGIC - Currently Delta Clone does not support migrating table history
+# MAGIC - I have not tested this with FUSE Mounts yet
 
 # COMMAND ----------
 
