@@ -1,6 +1,17 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC # Migrating Delta Tables to New Location
+# MAGIC # Migrate Delta Table to New Location
+# MAGIC ### What?
+# MAGIC Title ^
+# MAGIC ### Why?
+# MAGIC Many users desire a way to re-organize their Delta Tables as they evolve with Databricks and see new patterns. We also want to help customers migrate away from DBFS managed tables and FUSE Mounts to prepare them for Unity Catalog. 
+# MAGIC ### Who?
+# MAGIC Customers using DBFS Tables/FUSE Mounts
+# MAGIC Customers who ask for a way to move a Delta Lake table to a new location
+# MAGIC Persona: Data Engineers can run this interactively and get feedback from the cell output OR DE/Ops could script this out using Widget Paremeters to migrate many tables at once. 
+# MAGIC ### How?
+# MAGIC Delta Lake includes a great feature called [Delta Clone](https://docs.databricks.com/spark/latest/spark-sql/language-manual/delta-clone.html).
+# MAGIC This notebook implements Delta Clone and Delta Lake w/ the PySpark and SparkSQL APIs to facilitate a migration of your Delta Lake Table and associated Hive Metadata to a new location. 
 
 # COMMAND ----------
 
